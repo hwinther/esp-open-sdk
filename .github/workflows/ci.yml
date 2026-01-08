@@ -42,4 +42,4 @@ jobs:
           else
             echo "docker image $DOCKER_IMAGE_NAME already exists, not pushing it"
           fi
-        if: startsWith(github.ref, 'refs/heads/wsh')
+        if: startsWith(github.ref, 'refs/heads/master')
