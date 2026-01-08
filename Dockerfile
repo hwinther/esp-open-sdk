@@ -23,7 +23,8 @@ WORKDIR /home/sdk
 RUN mkdir -p /home/sdk/esp-open-sdk/crosstool-NG/.build/tarballs && wget -O /home/sdk/esp-open-sdk/crosstool-NG/.build/tarballs/expat-2.4.8.tar.gz https://master.dl.sourceforge.net/project/expat/expat/2.4.8/expat-2.4.8-RENAMED-VULNERABLE-PLEASE-USE-2.6.2-INSTEAD.tar.gz
 
 # Build the SDK.
-RUN (cd esp-open-sdk && make)
+ARG MAKE_ARGS=""
+RUN (cd esp-open-sdk && make ${MAKE_ARGS})
 
 # remove stuff which is not needed anymore to make the image a bit smaller
 RUN (cd esp-open-sdk && rm -rf crosstool-NG && rm -rf esp-open-lwip && rm -rf lx106-hal && rm -rf esptool)
