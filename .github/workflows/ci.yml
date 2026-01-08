@@ -1,10 +1,10 @@
 name: ci
 on: [push, pull_request]
 env:
-  DOCKER_USERNAME: igagis
+  DOCKER_USERNAME: hwinther
   # github container registry
   DOCKER_REGISTRY: ghcr.io
-  IMAGE_OWNER: esp-open-sdk/esp-open-sdk
+  IMAGE_OWNER: hwinther/esp-open-sdk
   IMAGE_NAME: esp-open-sdk
   # image version is to be updated manually when new image is to be published
   IMAGE_TAG: 10_sdk_3.0.0
@@ -42,4 +42,4 @@ jobs:
           else
             echo "docker image $DOCKER_IMAGE_NAME already exists, not pushing it"
           fi
-        if: startsWith(github.ref, 'refs/heads/master')
+        if: startsWith(github.ref, 'refs/heads/wsh')
