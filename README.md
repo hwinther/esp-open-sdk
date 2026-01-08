@@ -1,4 +1,6 @@
-NOT MAINTAINED anymore!!!
+~~NOT MAINTAINED anymore!!!~~
+
+Maintained for the moment by Hans Christian Winther-Sørensen, although I don't expect there will be another version any time soon.
 
 # Fork
 
