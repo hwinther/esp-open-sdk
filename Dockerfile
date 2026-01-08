@@ -38,7 +38,7 @@ USER root
 # switch to python3 because python-serial package is not available in debian bullseye, so we have to use python3-serial
 # and esptool will be run with python3 then
 RUN apt update && \
-    apt install -y python3 python-is-python3 python3-serial && \
+    apt install -y python3 python-is-python3 python3-serial make && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 # make python3 the default, for some reason, installing python-is-python3 package does not work when building on github actions CI
